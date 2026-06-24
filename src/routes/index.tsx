@@ -6,7 +6,7 @@ import {
   Briefcase, GraduationCap, Award, Sparkles, Cpu, Database, Brain, Wrench,
   ExternalLink, Send, Calendar, Trophy
 } from "lucide-react";
-// Profile photo — using external URL provided by user
+import profileImg from "../assets/akki-themed.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -181,7 +181,7 @@ function Hero() {
                style={{ background: "var(--gradient-primary)" }} />
           <div className="relative glass rounded-[1.75rem] p-3 overflow-hidden"
                style={{ animation: "float 6s ease-in-out infinite" }}>
-            <img src="https://i.postimg.cc/mgPpRNHP/akki1.jpg" alt="Burugu Akshitha" width={1024} height={1536}
+            <img src={profileImg} alt="Burugu Akshitha" width={1024} height={1536}
                  className="w-full rounded-2xl object-cover" />
             <div className="absolute bottom-6 left-6 right-6 glass rounded-xl px-4 py-3 flex items-center gap-3">
               <span className="h-2 w-2 rounded-full bg-primary animate-pulse shadow-[0_0_12px_var(--color-primary)]" />
