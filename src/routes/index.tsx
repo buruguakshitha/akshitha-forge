@@ -439,40 +439,16 @@ function Certifications() {
     "Cisco Networking Academy — Introduction to Data Science",
     "Cisco Networking Academy — Cyber Security Essentials",
   ];
-  const achievements = [
-    "Active LeetCode Profile",
-    "Consistent Daily Coding Practice",
-    "Machine Learning Projects",
-    "Software Development Internship",
-    "Strong Academic Performance (CGPA 8.96)",
-  ];
   return (
-    <Section id="certifications" eyebrow="Credentials" title="Certifications & Achievements">
-      <div className="grid lg:grid-cols-2 gap-10">
-        <div>
-          <h3 className="text-sm uppercase tracking-[0.25em] text-muted-foreground mb-4">Certifications</h3>
-          <div className="space-y-3">
-            {certs.map((c, i) => (
-              <motion.div key={c} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.06 }}
-                className="glass rounded-xl p-4 flex items-center gap-3 hover:border-primary/60 transition-colors">
-                <Award className="h-5 w-5 text-primary shrink-0" />
-                <span className="text-sm font-medium">{c}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-        <div>
-          <h3 className="text-sm uppercase tracking-[0.25em] text-muted-foreground mb-4">Achievements</h3>
-          <div className="space-y-3">
-            {achievements.map((a, i) => (
-              <motion.div key={a} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.06 }}
-                className="glass rounded-xl p-4 flex items-center gap-3 hover:border-primary/60 transition-colors">
-                <Trophy className="h-5 w-5 text-primary shrink-0" />
-                <span className="text-sm font-medium">{a}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+    <Section id="certifications" eyebrow="Credentials" title="Certifications">
+      <div className="max-w-2xl mx-auto space-y-3">
+        {certs.map((c, i) => (
+          <motion.div key={c} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.06 }}
+            className="glass rounded-xl p-4 flex items-center gap-3 hover:border-primary/60 transition-colors">
+            <Award className="h-5 w-5 text-primary shrink-0" />
+            <span className="text-sm font-medium">{c}</span>
+          </motion.div>
+        ))}
       </div>
     </Section>
   );
