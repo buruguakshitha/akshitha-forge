@@ -434,19 +434,62 @@ function Education() {
 
 function Certifications() {
   const certs = [
-    "Salesforce Certified Agentforce Specialist",
-    "Cisco Networking Academy — Networking Basics",
-    "Cisco Networking Academy — Introduction to Data Science",
-    "Cisco Networking Academy — Cyber Security Essentials",
+    {
+      title: "Salesforce Certified Agentforce Specialist",
+      org: "Salesforce",
+      year: "2025",
+      category: "Artificial Intelligence & CRM",
+      subs: [],
+    },
+    {
+      title: "AI Foundation and Advanced AI Program",
+      org: "Hexart",
+      year: "2025",
+      category: "Artificial Intelligence",
+      subs: [],
+    },
+    {
+      title: "Google Cloud Generative AI Program",
+      org: "Google Cloud & L4G",
+      year: "2025",
+      category: "Cloud Computing & Generative AI",
+      subs: [],
+    },
+    {
+      title: "Cisco Networking Academy Certifications",
+      org: "Cisco Networking Academy",
+      year: "2025",
+      category: "Networking, Data Science & Cyber Security",
+      subs: ["Networking Basics", "Introduction to Data Science", "Cyber Security Essentials"],
+    },
   ];
   return (
     <Section id="certifications" eyebrow="Credentials" title="Certifications">
-      <div className="max-w-2xl mx-auto space-y-3">
+      <div className="grid sm:grid-cols-2 gap-5 max-w-5xl mx-auto">
         {certs.map((c, i) => (
-          <motion.div key={c} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.06 }}
-            className="glass rounded-xl p-4 flex items-center gap-3 hover:border-primary/60 transition-colors">
-            <Award className="h-5 w-5 text-primary shrink-0" />
-            <span className="text-sm font-medium">{c}</span>
+          <motion.div key={c.title} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.08 }}
+            className="glass rounded-2xl p-6 hover:border-primary/60 transition-all hover:-translate-y-0.5"
+            style={{ boxShadow: "var(--shadow-elegant)" }}>
+            <div className="flex items-center gap-3 mb-3">
+              <span className="h-10 w-10 rounded-xl grid place-items-center text-primary-foreground shrink-0"
+                    style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}>
+                <Award className="h-5 w-5" />
+              </span>
+              <span className="text-xs glass rounded-md px-2 py-1">{c.year}</span>
+            </div>
+            <h3 className="font-semibold text-lg leading-snug">{c.title}</h3>
+            <p className="text-sm text-primary font-medium mt-1">{c.org}</p>
+            <p className="text-xs text-muted-foreground mt-1">{c.category}</p>
+            {c.subs.length > 0 && (
+              <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
+                {c.subs.map(s => (
+                  <li key={s} className="flex items-center gap-2">
+                    <span className="h-1 w-1 rounded-full bg-primary shrink-0" />
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            )}
           </motion.div>
         ))}
       </div>
