@@ -115,7 +115,7 @@ function Hero() {
       <div className="absolute inset-0 grid-bg opacity-40" />
       <div className="absolute inset-0" style={{ background: "var(--gradient-radial)" }} />
       <Particles />
-      <div className="relative mx-auto max-w-7xl px-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+      <div className="relative mx-auto max-w-7xl px-4 md:px-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
         <div>
           <motion.div {...fadeUp}
             className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-muted-foreground">
@@ -197,7 +197,7 @@ function Hero() {
 function Section({ id, eyebrow, title, children }: { id: string; eyebrow: string; title: string; children: React.ReactNode }) {
   return (
     <section id={id} className="relative py-24">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4 md:px-6">
         <motion.div {...fadeUp} className="mb-14 text-center">
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">{eyebrow}</div>
           <h2 className="text-4xl sm:text-5xl font-extrabold">{title}</h2>
@@ -530,7 +530,7 @@ function Field({ label, name, type = "text", placeholder }: { label: string; nam
 function Footer() {
   return (
     <footer className="relative mt-10 border-t border-white/5">
-      <div className="mx-auto max-w-7xl px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+      <div className="mx-auto max-w-7xl px-4 md:px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
         <div className="flex items-center gap-3">
           <span className="h-8 w-8 rounded-lg grid place-items-center font-bold text-primary-foreground text-xs"
                 style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}>BA</span>
