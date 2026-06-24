@@ -197,7 +197,7 @@ function Hero() {
 function Section({ id, eyebrow, title, children }: { id: string; eyebrow: string; title: string; children: React.ReactNode }) {
   return (
     <section id={id} className="relative py-24">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4 md:px-6">
         <motion.div {...fadeUp} className="mb-14 text-center">
           <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">{eyebrow}</div>
           <h2 className="text-4xl sm:text-5xl font-extrabold">{title}</h2>
