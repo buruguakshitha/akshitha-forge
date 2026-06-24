@@ -6,7 +6,7 @@ import {
   Briefcase, GraduationCap, Award, Sparkles, Cpu, Database, Brain, Wrench,
   ExternalLink, Send, Calendar, Trophy
 } from "lucide-react";
-// Profile photo — using external URL provided by user
+import profileImg from "../assets/akki-themed.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
