@@ -115,7 +115,7 @@ function Hero() {
       <div className="absolute inset-0 grid-bg opacity-40" />
       <div className="absolute inset-0" style={{ background: "var(--gradient-radial)" }} />
       <Particles />
-      <div className="relative mx-auto max-w-7xl px-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+      <div className="relative mx-auto max-w-7xl px-4 md:px-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
         <div>
           <motion.div {...fadeUp}
             className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-muted-foreground">
