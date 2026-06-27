@@ -395,7 +395,7 @@ function Experience() {
 
 function Education() {
   const items = [
-    { school: "CMR College of Engineering and Technology", degree: "B.Tech — Computer Science & Data Science", time: "2023 – 2027", score: "CGPA 8.96" },
+    { school: "CMR College of Engineering and Technology", degree: "B.Tech — Computer Science & Data Science", time: "2023 – 2027", score: "CGPA 8.98" },
     { school: "Narayana Junior College", degree: "Intermediate Education (MPC)", time: "2021 – 2023", score: "CGPA 9.74" },
   ];
   return (
