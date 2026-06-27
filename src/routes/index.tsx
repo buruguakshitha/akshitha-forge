@@ -216,7 +216,7 @@ function About() {
     { k: "College", v: "CMR College of Engg. & Tech." },
     { k: "Location", v: "Hyderabad, India" },
     { k: "Graduation", v: "2027" },
-    { k: "CGPA", v: "8.96" },
+    { k: "CGPA", v: "8.98" },
   ];
   return (
     <Section id="about" eyebrow="Who I Am" title="About Me">
