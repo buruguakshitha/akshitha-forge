@@ -223,19 +223,10 @@ function About() {
       <div className="grid lg:grid-cols-2 gap-10 items-start">
         <motion.div {...fadeUp} className="space-y-5 text-muted-foreground leading-relaxed">
           <p>
-            I am <span className="text-foreground font-semibold">Burugu Akshitha</span>, a Computer
-            Science and Data Science undergraduate at CMR College of Engineering and Technology with
-            a CGPA of <span className="text-primary font-semibold">8.96</span>.
-          </p>
-          <p>
-            I am passionate about Artificial Intelligence, Machine Learning, Data Science, Software
-            Development and Problem Solving. My interests include developing intelligent systems,
-            building automation solutions, and creating impactful applications that solve real-world
-            challenges.
-          </p>
-          <p>
-            I continuously improve my skills through hands-on projects, internships, certifications,
-            and daily coding practice on LeetCode.
+            Computer Science and Data Science undergraduate skilled in Python, Java, Machine
+            Learning, and Software Development. Experienced in developing AI-driven solutions
+            through internships and projects, with a strong passion for Artificial Intelligence,
+            Data Science, and problem-solving.
           </p>
         </motion.div>
         <motion.div {...fadeUp} className="grid sm:grid-cols-2 gap-3">
