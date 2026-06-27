@@ -107,7 +107,7 @@ function Hero() {
   const stats = [
     { v: "3+", l: "Projects Completed" },
     { v: "1", l: "Internship" },
-    { v: "8.96", l: "CGPA" },
+    { v: "8.98", l: "CGPA" },
     { v: "Daily", l: "LeetCode Solver" },
   ];
   return (
@@ -216,7 +216,7 @@ function About() {
     { k: "College", v: "CMR College of Engg. & Tech." },
     { k: "Location", v: "Hyderabad, India" },
     { k: "Graduation", v: "2027" },
-    { k: "CGPA", v: "8.96" },
+    { k: "CGPA", v: "8.98" },
   ];
   return (
     <Section id="about" eyebrow="Who I Am" title="About Me">
