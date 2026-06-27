@@ -134,10 +134,10 @@ function Hero() {
           </motion.p>
           <motion.p {...fadeUp} transition={{ duration: 0.7, delay: 0.18 }}
             className="mt-4 text-muted-foreground max-w-xl leading-relaxed">
-            Passionate about building intelligent solutions through Artificial Intelligence,
-            Machine Learning, and Software Development. Skilled in creating impactful
-            applications and solving real-world problems through hands-on projects and
-            competitive programming.
+            Computer Science and Data Science undergraduate skilled in Python, Java, Machine
+            Learning, and Software Development. Experienced in developing AI-driven solutions
+            through internships and projects, with a strong passion for Artificial Intelligence,
+            Data Science, and problem-solving..
           </motion.p>
 
           <motion.div {...fadeUp} transition={{ duration: 0.7, delay: 0.24 }}
