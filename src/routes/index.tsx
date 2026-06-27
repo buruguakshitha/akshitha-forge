@@ -107,7 +107,7 @@ function Hero() {
   const stats = [
     { v: "3+", l: "Projects Completed" },
     { v: "1", l: "Internship" },
-    { v: "8.96", l: "CGPA" },
+    { v: "8.98", l: "CGPA" },
     { v: "Daily", l: "LeetCode Solver" },
   ];
   return (
