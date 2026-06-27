@@ -10,11 +10,11 @@ import profileImg from "../assets/akki-themed.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
-    meta: [
-      { title: "Burugu Akshitha — AI / ML Developer Portfolio" },
+      meta: [
+      { title: "Burugu Akshitha — Data Science Student Portfolio" },
       { name: "description", content: "Computer Science & Data Science undergraduate building intelligent solutions in AI, ML and software development." },
-      { property: "og:title", content: "Burugu Akshitha — AI / ML Developer" },
-      { property: "og:description", content: "Portfolio of Burugu Akshitha — CS & Data Science undergrad, AI/ML enthusiast." },
+      { property: "og:title", content: "Burugu Akshitha — Data Science Student" },
+      { property: "og:description", content: "Portfolio of Burugu Akshitha — CS & Data Science undergrad, Data Science Student." },
     ],
   }),
   component: Index,
@@ -130,7 +130,7 @@ function Hero() {
           </motion.h1>
           <motion.p {...fadeUp} transition={{ duration: 0.7, delay: 0.12 }}
             className="mt-5 text-sm sm:text-base text-primary/90 font-medium">
-            AI & ML Enthusiast · Software Developer · Problem Solver
+            Data Science Student · Software Developer · Problem Solver
           </motion.p>
           <motion.p {...fadeUp} transition={{ duration: 0.7, delay: 0.18 }}
             className="mt-4 text-muted-foreground max-w-xl leading-relaxed">
