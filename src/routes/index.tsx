@@ -176,14 +176,20 @@ function Hero() {
 
         <motion.div initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.2 }}
-          className="relative">
-          <div className="absolute -inset-6 rounded-[2rem] opacity-60 blur-3xl"
+          className="relative mx-auto aspect-square w-full max-w-[26rem]">
+          <div className="absolute -inset-6 rounded-full opacity-60 blur-3xl"
                style={{ background: "var(--gradient-primary)" }} />
-          <div className="relative glass rounded-[1.75rem] p-3 overflow-hidden"
-               style={{ animation: "float 6s ease-in-out infinite" }}>
-            <img src={profileImg} alt="Burugu Akshitha" width={1024} height={1536}
-                 className="w-full rounded-2xl object-cover" />
-            <div className="absolute bottom-6 left-6 right-6 glass rounded-xl px-4 py-3 flex items-center gap-3">
+          <div className="relative aspect-square rounded-full p-[3px]"
+               style={{
+                 background: "var(--gradient-primary)",
+                 boxShadow: "0 0 40px color-mix(in oklab, var(--color-primary) 55%, transparent), 0 0 90px color-mix(in oklab, var(--color-primary) 35%, transparent)",
+                 animation: "float 6s ease-in-out infinite",
+               }}>
+            <div className="relative h-full w-full overflow-hidden rounded-full bg-background ring-1 ring-primary/40">
+              <img src={profileImg} alt="Burugu Akshitha" width={1024} height={1024}
+                   className="h-full w-full object-cover object-center" />
+            </div>
+            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 glass rounded-xl px-4 py-2 flex items-center gap-3 whitespace-nowrap">
               <span className="h-2 w-2 rounded-full bg-primary animate-pulse shadow-[0_0_12px_var(--color-primary)]" />
               <span className="text-xs font-mono text-muted-foreground">$ status: building_the_future...</span>
             </div>
