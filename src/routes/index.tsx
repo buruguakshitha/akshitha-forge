@@ -490,13 +490,12 @@ function Certifications() {
 }
 
 function Contact() {
-  const [sent, setSent] = useState(false);
   return (
     <Section id="contact" eyebrow="Get In Touch" title="Let's Build Something Amazing Together">
       <p className="-mt-8 mb-12 text-center text-muted-foreground max-w-2xl mx-auto">
         I'm always open to discussing new opportunities, innovative projects, internships, and collaborations.
       </p>
-      <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-6">
+      <div className="max-w-2xl mx-auto">
         <motion.div {...fadeUp} className="space-y-3">
           {[
             { icon: Mail, label: "Email", value: "buruguakshitha457@gmail.com", href: "mailto:buruguakshitha457@gmail.com" },
@@ -533,15 +532,6 @@ function Contact() {
   );
 }
 
-function Field({ label, name, type = "text", placeholder }: { label: string; name: string; type?: string; placeholder?: string }) {
-  return (
-    <div>
-      <label className="text-[11px] uppercase tracking-widest text-muted-foreground">{label}</label>
-      <input required name={name} type={type} placeholder={placeholder}
-        className="mt-2 w-full rounded-xl bg-background/60 border border-white/10 px-4 py-3 text-sm outline-none focus:border-primary/60 transition-colors" />
-    </div>
-  );
-}
 
 function Footer() {
   return (
