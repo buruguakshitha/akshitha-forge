@@ -347,15 +347,6 @@ function Projects() {
                 <span key={t} className="rounded-md px-2 py-1 text-[10px] font-mono border border-primary/20 bg-primary/5">{t}</span>
               ))}
             </div>
-            <div className="mt-5 flex gap-2 pt-4 border-t border-white/5">
-              <a href="#" className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg glass px-3 py-2 text-xs font-medium hover:border-primary/60 transition-colors">
-                <Github className="h-3.5 w-3.5" /> Code
-              </a>
-              <a href="#" className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-xs font-medium text-primary-foreground transition-all hover:scale-[1.02]"
-                 style={{ background: "var(--gradient-primary)" }}>
-                <ExternalLink className="h-3.5 w-3.5" /> Demo
-              </a>
-            </div>
           </motion.article>
         ))}
       </div>
