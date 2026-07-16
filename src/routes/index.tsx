@@ -7,6 +7,7 @@ import {
   ExternalLink, Send, Calendar, Trophy
 } from "lucide-react";
 import profileImg from "../assets/akki-themed.jpg";
+import resumeAsset from "../assets/resume.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
