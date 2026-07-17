@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import {
@@ -147,7 +148,7 @@ function Hero() {
                style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow-lg)" }}>
               View Projects <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#"
+            <a href={resumeAsset.url} download="Akshitha_Resume.pdf"
                className="glass inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold hover:border-primary/60 transition-colors">
               <Download className="h-4 w-4" /> Download Resume
             </a>
