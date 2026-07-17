@@ -496,7 +496,7 @@ function Contact() {
       <p className="-mt-8 mb-12 text-center text-muted-foreground max-w-2xl mx-auto">
         I'm always open to discussing new opportunities, innovative projects, internships, and collaborations.
       </p>
-      <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-6">
+      <div className="max-w-2xl mx-auto">
         <motion.div {...fadeUp} className="space-y-3">
           {[
             { icon: Mail, label: "Email", value: "buruguakshitha457@gmail.com", href: "mailto:buruguakshitha457@gmail.com" },
@@ -527,26 +527,6 @@ function Contact() {
             </div>
           </div>
         </motion.div>
-
-        <motion.form {...fadeUp}
-          onSubmit={(e) => { e.preventDefault(); setSent(true); setTimeout(() => setSent(false), 2500); }}
-          className="glass rounded-2xl p-6 space-y-4" style={{ boxShadow: "var(--shadow-elegant)" }}>
-          <div className="grid sm:grid-cols-2 gap-4">
-            <Field label="Name" name="name" placeholder="Your full name" />
-            <Field label="Email" name="email" type="email" placeholder="you@email.com" />
-          </div>
-          <Field label="Subject" name="subject" placeholder="What's this about?" />
-          <div>
-            <label className="text-[11px] uppercase tracking-widest text-muted-foreground">Message</label>
-            <textarea required rows={5} placeholder="Tell me about your project, idea, or opportunity..."
-              className="mt-2 w-full rounded-xl bg-background/60 border border-white/10 px-4 py-3 text-sm outline-none focus:border-primary/60 transition-colors resize-none" />
-          </div>
-          <button type="submit"
-            className="group w-full inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold text-primary-foreground transition-all hover:scale-[1.01]"
-            style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow-lg)" }}>
-            {sent ? "Sent ✓" : (<>Send Message <Send className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" /></>)}
-          </button>
-        </motion.form>
       </div>
     </Section>
   );
