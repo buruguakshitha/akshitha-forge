@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import {
