@@ -531,16 +531,6 @@ function Contact() {
   );
 }
 
-function Field({ label, name, type = "text", placeholder }: { label: string; name: string; type?: string; placeholder?: string }) {
-  return (
-    <div>
-      <label className="text-[11px] uppercase tracking-widest text-muted-foreground">{label}</label>
-      <input required name={name} type={type} placeholder={placeholder}
-        className="mt-2 w-full rounded-xl bg-background/60 border border-white/10 px-4 py-3 text-sm outline-none focus:border-primary/60 transition-colors" />
-    </div>
-  );
-}
-
 function Footer() {
   return (
     <footer className="relative mt-10 border-t border-white/5">
