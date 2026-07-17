@@ -490,7 +490,6 @@ function Certifications() {
 }
 
 function Contact() {
-  const [sent, setSent] = useState(false);
   return (
     <Section id="contact" eyebrow="Get In Touch" title="Let's Build Something Amazing Together">
       <p className="-mt-8 mb-12 text-center text-muted-foreground max-w-2xl mx-auto">
