@@ -355,35 +355,56 @@ function Projects() {
 }
 
 function Experience() {
+  const roles = [
+    {
+      title: "Python Development Intern",
+      org: "Infotact Solutions",
+      time: "Jan 2025 – Mar 2025",
+      bullets: [
+        "Developed Python automation scripts for structured data processing.",
+        "Reduced manual effort through targeted automation pipelines.",
+        "Optimized script performance and improved efficiency by 15%.",
+        "Followed strong coding standards and documentation practices.",
+      ],
+    },
+    {
+      title: "Generative AI Virtual Intern",
+      org: "Google Cloud x AICTE",
+      time: "10-Week Program",
+      bullets: [
+        "Completed a 10-week virtual internship in Generative AI, gaining practical experience with AI concepts, prompt engineering, and modern AI tools.",
+        "Earned 22 skill badges through hands-on learning.",
+      ],
+    },
+  ];
   return (
     <Section id="experience" eyebrow="Journey" title="Professional Experience">
       <div className="relative max-w-3xl mx-auto">
         <div className="absolute left-4 top-2 bottom-2 w-px" style={{ background: "var(--gradient-primary)" }} />
-        <motion.div {...fadeUp} className="relative pl-14">
-          <span className="absolute left-0 top-2 h-8 w-8 rounded-full grid place-items-center"
-                style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}>
-            <Briefcase className="h-4 w-4 text-primary-foreground" />
-          </span>
-          <div className="glass rounded-2xl p-6" style={{ boxShadow: "var(--shadow-elegant)" }}>
-            <div className="flex flex-wrap items-baseline justify-between gap-2">
-              <h3 className="text-xl font-semibold">Python Development Intern</h3>
-              <span className="text-xs glass rounded-md px-2 py-1 inline-flex items-center gap-1.5">
-                <Calendar className="h-3 w-3 text-primary" /> Jan 2025 – Mar 2025
+        <div className="space-y-8">
+          {roles.map((r, i) => (
+            <motion.div key={r.title} {...fadeUp} transition={{ duration: 0.6, delay: i * 0.1 }} className="relative pl-14">
+              <span className="absolute left-0 top-2 h-8 w-8 rounded-full grid place-items-center"
+                    style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}>
+                <Briefcase className="h-4 w-4 text-primary-foreground" />
               </span>
-            </div>
-            <div className="text-primary font-medium mt-1">Infotact Solutions</div>
-            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              {[
-                "Developed Python automation scripts for structured data processing.",
-                "Reduced manual effort through targeted automation pipelines.",
-                "Optimized script performance and improved efficiency by 15%.",
-                "Followed strong coding standards and documentation practices.",
-              ].map(t => (
-                <li key={t} className="flex gap-2"><span className="text-primary mt-1">▸</span>{t}</li>
-              ))}
-            </ul>
-          </div>
-        </motion.div>
+              <div className="glass rounded-2xl p-6" style={{ boxShadow: "var(--shadow-elegant)" }}>
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 className="text-xl font-semibold">{r.title}</h3>
+                  <span className="text-xs glass rounded-md px-2 py-1 inline-flex items-center gap-1.5">
+                    <Calendar className="h-3 w-3 text-primary" /> {r.time}
+                  </span>
+                </div>
+                <div className="text-primary font-medium mt-1">{r.org}</div>
+                <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+                  {r.bullets.map(t => (
+                    <li key={t} className="flex gap-2"><span className="text-primary mt-1">▸</span>{t}</li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </Section>
   );
