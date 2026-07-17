@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Burugu Akshitha — Data Science Student Portfolio" },
+      { name: "description", content: "Computer Science & Data Science undergraduate building intelligent solutions in AI, ML and software development." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Burugu Akshitha — Data Science Student Portfolio" },
+      { property: "og:description", content: "Computer Science & Data Science undergraduate building intelligent solutions in AI, ML and software development." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Burugu Akshitha — Data Science Student Portfolio" },
+      { name: "twitter:description", content: "Computer Science & Data Science undergraduate building intelligent solutions in AI, ML and software development." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/81630524-b8cc-41da-8259-d7e37c9b003b/id-preview-5a2a32fe--402e0afb-008e-48b0-94dd-4f2f100b2ce7.lovable.app-1784261025802.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/81630524-b8cc-41da-8259-d7e37c9b003b/id-preview-5a2a32fe--402e0afb-008e-48b0-94dd-4f2f100b2ce7.lovable.app-1784261025802.png" },
     ],
     links: [
       {

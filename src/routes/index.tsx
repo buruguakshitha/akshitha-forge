@@ -1,20 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import {
   Github, Linkedin, Code2, Mail, Phone, MapPin, Download, ArrowRight,
   Briefcase, GraduationCap, Award, Sparkles, Cpu, Database, Brain, Wrench,
-  Calendar, Trophy
+  ExternalLink, Send, Calendar, Trophy
 } from "lucide-react";
 import profileImg from "../assets/akki-themed.jpg";
-import resumeAsset from "../assets/resume.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
       meta: [
       { title: "Burugu Akshitha — Data Science Student Portfolio" },
       { name: "description", content: "Computer Science & Data Science undergraduate building intelligent solutions in AI, ML and software development." },
-      { property: "og:title", content: "Burugu Akshitha — Data Science Student" },
-      { property: "og:description", content: "Portfolio of Burugu Akshitha — CS & Data Science undergrad, Data Science Student." },
+      { property: "og:title", content: "Burugu Akshitha — Data Science Student Portfolio" },
+      { property: "og:description", content: "Computer Science & Data Science undergraduate building intelligent solutions in AI, ML and software development." },
     ],
   }),
   component: Index,
@@ -108,6 +108,7 @@ function Hero() {
     { v: "3+", l: "Projects Completed" },
     { v: "1", l: "Internship" },
     { v: "8.98", l: "CGPA" },
+    { v: "Daily", l: "LeetCode Solver" },
   ];
   return (
     <section id="home" className="relative min-h-screen pt-32 pb-20 overflow-hidden">
@@ -146,7 +147,7 @@ function Hero() {
                style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow-lg)" }}>
               View Projects <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href={resumeAsset.url} download="FINAL_RESUME1.pdf"
+            <a href="#"
                className="glass inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold hover:border-primary/60 transition-colors">
               <Download className="h-4 w-4" /> Download Resume
             </a>
@@ -175,20 +176,14 @@ function Hero() {
 
         <motion.div initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.2 }}
-          className="relative mx-auto aspect-square w-full max-w-[26rem]">
-          <div className="absolute -inset-6 rounded-full opacity-60 blur-3xl"
+          className="relative">
+          <div className="absolute -inset-6 rounded-[2rem] opacity-60 blur-3xl"
                style={{ background: "var(--gradient-primary)" }} />
-          <div className="relative aspect-square rounded-full p-[3px]"
-               style={{
-                 background: "var(--gradient-primary)",
-                 boxShadow: "0 0 40px color-mix(in oklab, var(--color-primary) 55%, transparent), 0 0 90px color-mix(in oklab, var(--color-primary) 35%, transparent)",
-                 animation: "float 6s ease-in-out infinite",
-               }}>
-            <div className="relative h-full w-full overflow-hidden rounded-full bg-background ring-1 ring-primary/40">
-              <img src={profileImg} alt="Burugu Akshitha" width={1024} height={1024}
-                   className="h-full w-full object-cover object-center" />
-            </div>
-            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 glass rounded-xl px-4 py-2 flex items-center gap-3 whitespace-nowrap">
+          <div className="relative glass rounded-[1.75rem] p-3 overflow-hidden"
+               style={{ animation: "float 6s ease-in-out infinite" }}>
+            <img src={profileImg} alt="Burugu Akshitha" width={1024} height={1536}
+                 className="w-full rounded-2xl object-cover" />
+            <div className="absolute bottom-6 left-6 right-6 glass rounded-xl px-4 py-3 flex items-center gap-3">
               <span className="h-2 w-2 rounded-full bg-primary animate-pulse shadow-[0_0_12px_var(--color-primary)]" />
               <span className="text-xs font-mono text-muted-foreground">$ status: building_the_future...</span>
             </div>
@@ -347,6 +342,15 @@ function Projects() {
                 <span key={t} className="rounded-md px-2 py-1 text-[10px] font-mono border border-primary/20 bg-primary/5">{t}</span>
               ))}
             </div>
+            <div className="mt-5 flex gap-2 pt-4 border-t border-white/5">
+              <a href="#" className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg glass px-3 py-2 text-xs font-medium hover:border-primary/60 transition-colors">
+                <Github className="h-3.5 w-3.5" /> Code
+              </a>
+              <a href="#" className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-xs font-medium text-primary-foreground transition-all hover:scale-[1.02]"
+                 style={{ background: "var(--gradient-primary)" }}>
+                <ExternalLink className="h-3.5 w-3.5" /> Demo
+              </a>
+            </div>
           </motion.article>
         ))}
       </div>
@@ -355,56 +359,35 @@ function Projects() {
 }
 
 function Experience() {
-  const roles = [
-    {
-      title: "Python Development Intern",
-      org: "Infotact Solutions",
-      time: "Jan 2025 – Mar 2025",
-      bullets: [
-        "Developed Python automation scripts for structured data processing.",
-        "Reduced manual effort through targeted automation pipelines.",
-        "Optimized script performance and improved efficiency by 15%.",
-        "Followed strong coding standards and documentation practices.",
-      ],
-    },
-    {
-      title: "Generative AI Virtual Intern",
-      org: "Google Cloud x AICTE",
-      time: "10-Week Program",
-      bullets: [
-        "Completed a 10-week virtual internship in Generative AI, gaining practical experience with AI concepts, prompt engineering, and modern AI tools.",
-        "Earned 22 skill badges through hands-on learning.",
-      ],
-    },
-  ];
   return (
     <Section id="experience" eyebrow="Journey" title="Professional Experience">
       <div className="relative max-w-3xl mx-auto">
         <div className="absolute left-4 top-2 bottom-2 w-px" style={{ background: "var(--gradient-primary)" }} />
-        <div className="space-y-8">
-          {roles.map((r, i) => (
-            <motion.div key={r.title} {...fadeUp} transition={{ duration: 0.6, delay: i * 0.1 }} className="relative pl-14">
-              <span className="absolute left-0 top-2 h-8 w-8 rounded-full grid place-items-center"
-                    style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}>
-                <Briefcase className="h-4 w-4 text-primary-foreground" />
+        <motion.div {...fadeUp} className="relative pl-14">
+          <span className="absolute left-0 top-2 h-8 w-8 rounded-full grid place-items-center"
+                style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}>
+            <Briefcase className="h-4 w-4 text-primary-foreground" />
+          </span>
+          <div className="glass rounded-2xl p-6" style={{ boxShadow: "var(--shadow-elegant)" }}>
+            <div className="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 className="text-xl font-semibold">Python Development Intern</h3>
+              <span className="text-xs glass rounded-md px-2 py-1 inline-flex items-center gap-1.5">
+                <Calendar className="h-3 w-3 text-primary" /> Jan 2025 – Mar 2025
               </span>
-              <div className="glass rounded-2xl p-6" style={{ boxShadow: "var(--shadow-elegant)" }}>
-                <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  <h3 className="text-xl font-semibold">{r.title}</h3>
-                  <span className="text-xs glass rounded-md px-2 py-1 inline-flex items-center gap-1.5">
-                    <Calendar className="h-3 w-3 text-primary" /> {r.time}
-                  </span>
-                </div>
-                <div className="text-primary font-medium mt-1">{r.org}</div>
-                <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                  {r.bullets.map(t => (
-                    <li key={t} className="flex gap-2"><span className="text-primary mt-1">▸</span>{t}</li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+            </div>
+            <div className="text-primary font-medium mt-1">Infotact Solutions</div>
+            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+              {[
+                "Developed Python automation scripts for structured data processing.",
+                "Reduced manual effort through targeted automation pipelines.",
+                "Optimized script performance and improved efficiency by 15%.",
+                "Followed strong coding standards and documentation practices.",
+              ].map(t => (
+                <li key={t} className="flex gap-2"><span className="text-primary mt-1">▸</span>{t}</li>
+              ))}
+            </ul>
+          </div>
+        </motion.div>
       </div>
     </Section>
   );
@@ -506,12 +489,13 @@ function Certifications() {
 }
 
 function Contact() {
+  const [sent, setSent] = useState(false);
   return (
     <Section id="contact" eyebrow="Get In Touch" title="Let's Build Something Amazing Together">
       <p className="-mt-8 mb-12 text-center text-muted-foreground max-w-2xl mx-auto">
         I'm always open to discussing new opportunities, innovative projects, internships, and collaborations.
       </p>
-      <div className="max-w-2xl mx-auto">
+      <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-6">
         <motion.div {...fadeUp} className="space-y-3">
           {[
             { icon: Mail, label: "Email", value: "buruguakshitha457@gmail.com", href: "mailto:buruguakshitha457@gmail.com" },
@@ -543,11 +527,39 @@ function Contact() {
           </div>
         </motion.div>
 
+        <motion.form {...fadeUp}
+          onSubmit={(e) => { e.preventDefault(); setSent(true); setTimeout(() => setSent(false), 2500); }}
+          className="glass rounded-2xl p-6 space-y-4" style={{ boxShadow: "var(--shadow-elegant)" }}>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Field label="Name" name="name" placeholder="Your full name" />
+            <Field label="Email" name="email" type="email" placeholder="you@email.com" />
+          </div>
+          <Field label="Subject" name="subject" placeholder="What's this about?" />
+          <div>
+            <label className="text-[11px] uppercase tracking-widest text-muted-foreground">Message</label>
+            <textarea required rows={5} placeholder="Tell me about your project, idea, or opportunity..."
+              className="mt-2 w-full rounded-xl bg-background/60 border border-white/10 px-4 py-3 text-sm outline-none focus:border-primary/60 transition-colors resize-none" />
+          </div>
+          <button type="submit"
+            className="group w-full inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold text-primary-foreground transition-all hover:scale-[1.01]"
+            style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow-lg)" }}>
+            {sent ? "Sent ✓" : (<>Send Message <Send className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" /></>)}
+          </button>
+        </motion.form>
       </div>
     </Section>
   );
 }
 
+function Field({ label, name, type = "text", placeholder }: { label: string; name: string; type?: string; placeholder?: string }) {
+  return (
+    <div>
+      <label className="text-[11px] uppercase tracking-widest text-muted-foreground">{label}</label>
+      <input required name={name} type={type} placeholder={placeholder}
+        className="mt-2 w-full rounded-xl bg-background/60 border border-white/10 px-4 py-3 text-sm outline-none focus:border-primary/60 transition-colors" />
+    </div>
+  );
+}
 
 function Footer() {
   return (
