@@ -106,7 +106,7 @@ function Particles() {
 function Hero() {
   const stats = [
     { v: "3+", l: "Projects Completed" },
-    { v: "1", l: "Internship" },
+    { v: "2", l: "Internships" },
     { v: "8.98", l: "CGPA" },
     { v: "Daily", l: "LeetCode Solver" },
   ];
