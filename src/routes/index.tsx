@@ -108,7 +108,6 @@ function Hero() {
     { v: "3+", l: "Projects Completed" },
     { v: "2", l: "Internships" },
     { v: "8.98", l: "CGPA" },
-    { v: "Daily", l: "LeetCode Solver" },
   ];
   return (
     <section id="home" className="relative min-h-screen pt-32 pb-20 overflow-hidden">
