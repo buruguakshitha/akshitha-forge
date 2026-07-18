@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import {
   Github, Linkedin, Code2, Mail, Phone, MapPin, Download, ArrowRight,
   Briefcase, GraduationCap, Award, Sparkles, Cpu, Database, Brain, Wrench,
-  ExternalLink, Calendar, Trophy
+  Calendar, Trophy
 } from "lucide-react";
 import profileImg from "../assets/akki-themed.jpg";
 
